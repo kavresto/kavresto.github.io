@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KAVresto</title>
+    <script type="text/javascript" src="scripts/jquery.min.js"></script>
+</head>
+<body>
+
+
+<style>
+    @import url("http://fonts.googleapis.com/css?family=Raleway:300,400,600,700,800");
+
+    html{
+        height:100%;
+    }
+    body{
+        font-family: sans-serif;
+        margin:0px;
+        height: 100%;
+    }
+    .mainbodydiv{
+        height:100%;
+    }
+    .page-header{
+        background-color:#46b3bd;
+        width:100%;
+        margin:0px;
+        padding:0px;
+        position:fixed;
+        top:0px;
+        height:120px;
+        text-align:center;
+    }
+    .logoimg{
+        height:65px;
+        width:auto;
+    }
+    .logoheader{
+        color:#ffffff;
+        text-align:center;
+        margin:0px;
+
+        font-weight:normal;
+
+    }
+    .page-content{
+        height:100%;
+        margin-top:120px;
+    }
+    .scroller-containter{
+        height:100%;
+        background-color:#000000;
+        height:calc(100% - 120px);
+
+    }
+    .scroller-div{
+        width:100%;
+        height:100%;
+    }
+    .backimg1{
+        background-image:url("images/reservations.jpg");
+        background-size:cover;
+    }
+
+    .scroller-text{
+        color:#54d8e4;
+        padding-top:1px;
+        background-color:rgba(0,0,0,0.5);
+        padding-bottom:1px;
+        margin-top:100px;
+        display:inline-block;
+
+    }
+    .scroller-text h1, .scroller-text h2, .scroller-text h3, .scroller-text h4, .scroller-text h5{
+        font-weight: normal;
+        text-align:center;
+    }
+
+    .section-div{
+        background-color: #46b3bd;
+        padding-top:10px;
+    }
+    .tablecontainer{
+        color:#54d8e4;
+        background-color:#000000;
+        padding-top:30px;
+        padding-bottom:30px;
+
+
+
+        background: #000000; /* Old browsers */
+        background: -moz-linear-gradient(left, #8c8c8c 0%, #000000 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left, #8c8c8c 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right, #8c8c8c 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c8c8c', endColorstr='#000000',GradientType=1 );/* IE6-9 */
+
+    }
+    .tablecontainer1{
+        color:#54d8e4;
+        background-color:#000000;
+        padding-top:30px;
+        padding-bottom:30px;
+
+
+
+        background: #000000; /* Old browsers */
+        background: -moz-linear-gradient(left, #000000 0%, #8c8c8c 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left, #000000 0%,#8c8c8c 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right, #000000 0%,#8c8c8c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#8c8c8c',GradientType=1 );/* IE6-9 */
+
+    }
+    .tabletorderingimg1{
+        background-image:url("images/tablet1.png");
+        width:100%;
+        height:400px;
+        background-size:contain;
+        background-repeat:no-repeat;
+    }
+    .tabletorderingimg2{
+        background-image:url("images/mobile1.png");
+        width:100%;
+        height:250px;
+        background-size:contain;
+        background-repeat:no-repeat;
+    }
+    .contenttable{
+        width:100%;
+    }
+    .digitalkotimg1{
+        background-image:url("images/tv1.png");
+        width:100%;
+        height:400px;
+        background-size:contain;
+        background-repeat:no-repeat;
+    }
+    .posorderingimg1{
+        background-image:url("images/monitor1.png");
+        width:100%;
+        height:400px;
+        background-size:contain;
+        background-repeat:no-repeat;
+    }
+    .inventoryimg1{
+        background-image:url("images/monitor2.png");
+        width:100%;
+        height:400px;
+        background-size:contain;
+        background-repeat:no-repeat;
+    }
+    .tablereservationimg1{
+        background-image:url("images/tablet2.png");
+        width:100%;
+        height:400px;
+        background-size:contain;
+        background-repeat:no-repeat;
+    }
+    .feedbackimg1{
+        background-image:url("images/tablet3.png");
+        width:100%;
+        height:400px;
+        background-size:contain;
+        background-repeat:no-repeat;
+    }
+    .starter-offer{
+        position:fixed;
+        bottom:0px;
+        left:0px;
+        background-color:#000000;
+        color:#ffffff;
+        padding:10px;
+    }
+    .offer-button{
+        background-color:#46b3bd;
+        color:#ffffff;
+        padding:10px;
+    }
+</style>
+
+
+<div class="mainbodydiv">
+    <div class="page-header">
+        <img class="logoimg" src="images/restwhite.png">
+        <h1 class="logoheader">KAVresto</h1>
+    </div>
+    <div class="page-content">
+        <div class="scroller-containter">
+            <div class="scroller-div backimg1">
+                <div class="scroller-text fronttext1">
+
+<h4 >A complete solution for Billing, Inventory with purchase processing, Material Consumption Tracking,
+                    Ordering through Tablet/Mobile by Customer/Steward, Displaying KOT's On TV,Table Reservation Management,
+                    Customer Feedback and Real Time reports on your mobile</h4>
+                </div>
+            </div>
+
+        </div>
+        <div id="tabletordering" class="section-div">
+            <div class="tablecontainer">
+                <table class="contenttable">
+                    <tr>
+                        <td style="width:20%;vertical-align: bottom;">
+                            <div class="tabletorderingimg1"></div>
+                        </td>
+                        <td style="width:30%;vertical-align: bottom;">
+                            <div class="tabletorderingimg2"></div>
+                        </td>
+                        <td style="width:50%;vertical-align: top;">
+                            <h1 style="font-weight: normal;">Ordering Through Tablet / Mobile</h1>
+                            <ul>
+                                <li> <h3 style="font-weight: normal;">Steward Login</h3></li>
+                                <li> <h3 style="font-weight: normal;">Table Selection</h3></li>
+                                <li> <h3 style="font-weight: normal;">Digital Menu Display with images</h3></li>
+                                <li> <h3 style="font-weight: normal;">Customer can browse through categorized menu</h3></li>
+                                <li> <h3 style="font-weight: normal;">Customer can give any customization required for any menu item (e.g Less Spicy)</h3></li>
+                                <li> <h3 style="font-weight: normal;">Customer can place order after confirmation</h3></li>
+                                <li> <h3 style="font-weight: normal;">Steward can take fast orders through mobile</h3></li>
+
+                            </ul>
+
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+        </div>
+
+
+        <div id="digitalkot" class="section-div">
+            <div class="tablecontainer1">
+                <table class="contenttable">
+                    <tr>
+
+
+                        <td style="width:50%;vertical-align: top;">
+                            <h1 style="font-weight: normal;">Digital KOT Display In Kitchen</h1>
+                            <ul>
+                                <li> <h3 style="font-weight: normal;">Digital KOT with customization in Red Color</h3></li>
+                                <li> <h3 style="font-weight: normal;">Display can be separated department wise (like Continental, Chineese, Bar, Etc)</h3></li>
+                                <li> <h3 style="font-weight: normal;">Item can be marked as Ready by Chef</h3></li>
+                                <li> <h3 style="font-weight: normal;">In one screen, steward can see all the items ready to be served</h3></li>
+                                <li> <h3 style="font-weight: normal;">Thermal printer can also be used</h3></li>
+
+                            </ul>
+
+                        </td>
+                        <td style="width:50%;vertical-align: bottom;">
+                            <div class="digitalkotimg1"></div>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+        </div>
+
+        <div id="posordering" class="section-div">
+            <div class="tablecontainer">
+                <table class="contenttable">
+                    <tr>
+                        <td style="width:50%;vertical-align: bottom;">
+                            <div class="posorderingimg1"></div>
+                        </td>
+
+                        <td style="width:50%;vertical-align: top;">
+                            <h1 style="font-weight: normal;">POS Ordering and Billing</h1>
+                            <ul>
+                                <li> <h3 style="font-weight: normal;">Ordering / Printing Bills</h3></li>
+                                <li> <h3 style="font-weight: normal;">Modify / Cancel Order</h3></li>
+                                <li> <h3 style="font-weight: normal;">Cancel / Complimentary Item</h3></li>
+                                <li> <h3 style="font-weight: normal;">Transfer / Merge Table</h3></li>
+                                <li> <h3 style="font-weight: normal;">Split / Settle Bill</h3></li>
+                                <li> <h3 style="font-weight: normal;">Configurable Taxes And Discounts</h3></li>
+                                <li> <h3 style="font-weight: normal;">Login Wise Permissions</h3></li>
+                                <li> <h3 style="font-weight: normal;">Works On Touchscreen As Well</h3></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+        <div id="inventory" class="section-div">
+            <div class="tablecontainer1">
+                <table class="contenttable">
+                    <tr>
+
+                        <td style="width:50%;vertical-align: top;">
+                            <h1 style="font-weight: normal;">Inventory Management & Material Consumption</h1>
+                            <ul>
+                                <li> <h3 style="font-weight: normal;">Purchase Indent Creation</h3></li>
+                                <li> <h3 style="font-weight: normal;">Purchase Order Creation</h3></li>
+                                <li> <h3 style="font-weight: normal;">Goods Received Notes (GRN)</h3></li>
+                                <li> <h3 style="font-weight: normal;">Goods Return</h3></li>
+                                <li> <h3 style="font-weight: normal;">Cost Center Management</h3></li>
+                                <li> <h3 style="font-weight: normal;">Goods Issue To Cost Center</h3></li>
+                                <li> <h3 style="font-weight: normal;">Goods Waste Management</h3></li>
+
+                            </ul>
+
+                        </td>
+                        <td style="width:50%;vertical-align: bottom;">
+                            <div class="inventoryimg1"></div>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+        </div>
+
+        <div id="tablereservation" class="section-div">
+            <div class="tablecontainer">
+                <table class="contenttable">
+                    <tr>
+                        <td style="width:10%;vertical-align: bottom;">
+                        </td>
+
+                        <td style="width:40%;vertical-align: bottom;">
+                            <div class="tablereservationimg1"></div>
+                        </td>
+
+                        <td style="width:50%;vertical-align: top;">
+                            <h1 style="font-weight: normal;">Table Reservation Management</h1>
+                            <ul>
+                                <li> <h3 style="font-weight: normal;">Reserve Table For Guests</h3></li>
+                                <li> <h3 style="font-weight: normal;">Maintain Waitlist, If No Table Available</h3></li>
+                                <li> <h3 style="font-weight: normal;">Allot Table To Waiting Customer</h3></li>
+                            </ul>
+
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+        </div>
+
+        <div id="feedback" class="section-div">
+            <div class="tablecontainer1" style="padding-bottom:200px;">
+                <table class="contenttable">
+                    <tr>
+
+                        <td style="width:70%;vertical-align: top;">
+                            <h1 style="font-weight: normal;">Customer Real Time Feedback</h1>
+                            <ul>
+                                <li> <h3 style="font-weight: normal;">Instant Customer reaction as notification in Admin App</h3></li>
+                                <li> <h3 style="font-weight: normal;">Share Positive Feedbacks on Social Media/Website</h3></li>
+                                <li> <h3 style="font-weight: normal;">Central Customer Base</h3></li>
+                                <li> <h3 style="font-weight: normal;">Automated SMS on Occasions</h3></li>
+                                <li> <h3 style="font-weight: normal;">Scheduled SMS/Email on Events</h3></li>
+                                <li> <h3 style="font-weight: normal;">Integrated Table No/Staff Id/Bill Amount with feedback</h3></li>
+                            </ul>
+
+                        </td>
+                        <td style="width:30%;vertical-align: bottom;text-align:center;">
+                            <div class="feedbackimg1"></div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="starter-offer">
+            <h3>Grab Our Starter Offer</h3>
+            <hr>
+            <table>
+                <tr>
+                    <td style="width:50%;">Phone Number*</td><td style="width:50%;"><input id="phonenumber" type="text"></td>
+                </tr>
+                <tr>
+                    <td style="width:50%;">Restaurant Name</td><td style="width:50%;"><input id="restname" type="text"></td>
+                </tr>
+                <tr>
+                    <td style="width:50%;">Name</td><td style="width:50%;"><input id="pname" type="text"></td>
+                </tr>
+
+            </table>
+            <div style="text-align: center;padding-top:10px;">
+                <button class="offer-button" onclick="onSubmitGetOffer()">Get The Offer</button>
+            </div>
+            <div style="text-align: center;padding-top:10px;">
+                <h6 style="margin:0px;">Call Us : 7506643268, 8898881828</h6>
+                <h6 style="margin:0px;">Email Us : contact@kavworks.com</h6>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    var onSubmitGetOffer = function(){
+        var phoneno = jQuery("#phonenumber").val();
+        var restname = jQuery("#restname").val();
+        var pname = jQuery("#pname").val();
+
+        jQuery.post("http://www.kavworks.com/contactusdetails",{
+            subject:"KAVREST OFFER CONTACTED",
+            message:" "+phoneno+","+restname+","+pname
+        }, function(){
+            alert("Thanks for your interest. We will contact you soon");
+        })
+    }
+
+</script>
+</body>
+</html>
